@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-family: "Barlow Semi Condensed", sans-serif;
+  --fw-500: 500;
+  --fw-600: 600;
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  gap: 2rem;
+
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+  font-family: var(--font-family);
+}
+
+.bg-primary-1 {
+  background-color: var(--moderate-violet);
+}
+.bg-primary-2 {
+  background-color: var(--very-dark-grayish-blue);
+}
+.bg-neutral {
+  background-color: var(--white);
+}
+
+.bg-dark {
+  background-color: var(--very-dark-blackish-blue);
+}
+
+.testimonial {
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--very-dark-grayish-blue) / 0.25);
+}
+
+.testimonial.quote {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.testimonial > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  padding-block: 1rem;
+}
+
+.testimonial > p:last-of-type {
+  opacity: 0.7;
+}
+
+.text-primary {
+  color: var(--light-grayish-blue);
+  font-weight: var(--fw-600);
+}
+
+.text-secondary {
+  font-weight: var(--fw-500);
+  color: var(--light-gray);
+}
+
+.text-neutral {
+  color: var(--very-dark-grayish-blue);
+  font-weight: var(--fw-600);
+}
+
+.text-neutral-secondary {
+  color: var(--very-dark-blackish-blue);
+  font-weight: var(--fw-500);
+}
+
+.flex img {
+  width: 1.6rem;
+  border-radius: 50%;
+  border: 0.1rem solid white;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.flex .name {
+  font-size: 1rem;
+  color: var(--white);
+  font-weight: var(--fw-500);
+}
+
+.flex .description {
+  font-size: 0.8rem;
+  color: var(--light-gray);
+}
+
+.flex .name.secondary {
+  color: var(--very-dark-grayish-blue);
+}
+.flex .description.secondary {
+  color: var(--very-dark-grayish-blue);
+}
+
+@media (min-width: 50rem) {
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .grid-col-span-2 {
+    grid-column: span 2;
+  }
+  .testimonial:nth-child(5) {
+    grid-row: 1 / span 2;
+    grid-column: 4;
+  }
+}
