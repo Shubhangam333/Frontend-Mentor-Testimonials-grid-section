@@ -21,6 +21,7 @@ body {
   place-items: center;
   min-height: 100vh;
   gap: 2rem;
+  background-color: var(--light-grayish-blue);
 
   padding-block: 2rem;
   width: min(95%, 70rem);
